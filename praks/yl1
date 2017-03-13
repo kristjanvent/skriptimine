@@ -1,0 +1,9 @@
+#!/bin/bash
+# 10-nd arvude trükkimine
+
+for i in {1..10}
+do
+	echo $i
+done
+
+#skripti lõpp
