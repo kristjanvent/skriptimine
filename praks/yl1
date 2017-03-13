@@ -1,12 +1,16 @@
 #!/bin/bash
 # 10-nd arvude trükkimine
 
-summa=0
+#summa=0
 for i in {1..10}
 do
-	#echo -n "$i "
-	summa=$(($summa+$i))
+	jaak=$(($i%2))
+	#echo -n $i ja tema jaak on $jaak"
+	if [ $jaak -eq 0 ]; then
+		echo $i
+		fi
+
 done
 echo
-echo "$i arvude SUMMA on $summa"
+#echo $i arvude SUMMA on $summa"
 #skripti lõpp
