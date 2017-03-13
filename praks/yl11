@@ -1,0 +1,13 @@
+#!/bin/bash
+# 10 plussi trükkimine
+
+for i in {1..10}
+do
+	for i in {1..10}
+	do
+		echo -n "+"
+	done
+	echo
+done
+
+#skripti lõpp
