@@ -4,17 +4,15 @@
 #
 # kasutame keskkonna muutuja nimeha $USER
 # tervitame kasutajat
-echo "Tere, $USER!"
+echo "Tere, $(whoami)!"
 # kuupäeva väärtuse loomine
 # defineerime vastava väärtusega muutuja
 kuupaev=`date +'%d. %B'`
-# väljastame kuupäeva koos seletusega
-echo "Täna on $kuupaev"
 # kella väärtuse loomine
 # defineerime vastava väärtusega muutuja
 kell=`date +%H:%M`
 # väljastame kella koos seletusega
-echo "Kell on $kell"
+echo "Täna on $kuupaev kell $kell"
 # loome antud kuu kalendri
 kalender=`cal`
 #valjastame kalendri seletustega 
