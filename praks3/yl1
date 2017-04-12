@@ -1,8 +1,7 @@
 #!/bin/bash
 #
-# keskkonna ja oma muutujate kasutamine
-#
-# kasutame keskkonna muutuja nimeha $USER
+# Kristjan Vent, info
+# Tervitame kasutajat, väljastame kuupäeva, praeguse kellaaja ja selle kuu kalendri
 # tervitame kasutajat
 echo "Tere, $(whoami)!"
 # kuupäeva väärtuse loomine
