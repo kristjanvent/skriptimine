@@ -1,9 +1,15 @@
 #!/bin/bash
 #
 # ip järgi arvuti kontrollimine
-#for((nr=1; nr<=10; nr++))
-for ip in 172.23.13.{20..50}
+echo -n "Sisesta vahemiku algus: "
+read algus
+echo -n "Sisesta vahemiku lopp: "
+read lopp
+for((nr=$algus; nr<=$lopp; nr++))
+#for ip in 172.23.13.{20..50}
 do
+  # paneme ip kokku
+  ip=172.23.13.$nr
   # teatame ip pingi
   ping -c 1 $ip > /dev/null  # väljund in kustutatud
   # kontrollime ping käsu tulemust (kas läks läbi)
