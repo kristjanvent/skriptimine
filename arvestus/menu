@@ -1,0 +1,24 @@
+#!/bin/bash
+# Kristjan Vent, menu
+# Väljastame menüü, laseme menüüst söögi valida, valitud söögi kohta kirjeldus
+# Tervitame, väljastame menüü
+PS3='Please make a selection (1 or 2, 3 or Quit): '
+options=("steak and potatoes" "fish and chips" "soup and salad" "Quit")
+select opt in "${options[@]}"
+do
+  case $opt in
+       "steak and potatoes")
+        (echo Stick to your ribs.; echo Watch your cholesterol.; echo Enjoy your meal!)
+        ;;
+       "fish and chips")
+        (echo British are coming!; echo Enjoy your meal!)
+        ;;
+       "soup and salad")
+        (echo Health foods...; echo Dieting is so boring.; echo Enjoy your meal!)
+        ;;
+       "Quit")
+         break
+         ;;
+        *) echo invalid option;;
+       esac
+done
