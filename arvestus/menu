@@ -1,24 +1,31 @@
 #!/bin/bash
 # Kristjan Vent, menu
 # Väljastame menüü, laseme menüüst söögi valida, valitud söögi kohta kirjeldus
-# Tervitame, väljastame menüü
-PS3='Please make a selection (1 or 2, 3 or Quit): '
+# Tervitame, väljastame menüü ja valikud (1, 2, 3 või Quit)
+PS3='Please make a selection (1 or 2, 3 or 4): '
 options=("steak and potatoes" "fish and chips" "soup and salad" "Quit")
+# kasutaja numbri valiku põhjal valime vastava toidu või lahkume skriptist
 select opt in "${options[@]}"
+# hakkame koostama valikuid
 do
+# valik number 1, valides number 1 tuleb ka vastav toidukirjeldus
   case $opt in
        "steak and potatoes")
         (echo Stick to your ribs.; echo Watch your cholesterol.; echo Enjoy your meal!)
         ;;
+# valik number 2, valides number 2 tuleb ka vastav toidukirjeldus
        "fish and chips")
         (echo British are coming!; echo Enjoy your meal!)
         ;;
+# valik number 3, valides number 3 tuleb ka vastav toidu kirjeldus
        "soup and salad")
         (echo Health foods...; echo Dieting is so boring.; echo Enjoy your meal!)
         ;;
+# valik number 4, valides number 4 lahkume skriptist
        "Quit")
          break
          ;;
         *) echo invalid option;;
        esac
 done
+# skripti lõpp
